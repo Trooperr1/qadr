@@ -7,10 +7,16 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false)
 
   useEffect(() => {
+    // Only enable custom cursor on desktop
+    if (window.innerWidth <= 768) return
+
     const cursorDot = cursorDotRef.current
     const cursorOutline = cursorOutlineRef.current
 
     if (!cursorDot || !cursorOutline) return
+
+    // Enable custom cursor CSS
+    document.body.classList.add('custom-cursor-enabled')
 
     let mouseX = 0
     let mouseY = 0
@@ -85,6 +91,7 @@ export default function CustomCursor() {
     animateOutline()
 
     return () => {
+      document.body.classList.remove('custom-cursor-enabled')
       document.removeEventListener('mousemove', handleMouseMove)
       hoverElements.forEach((el) => {
         el.removeEventListener('mouseenter', handleMouseEnter)

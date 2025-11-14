@@ -162,14 +162,15 @@ p {
   transition: all var(--transition-base);
 }
 
-/* Hide default cursor */
-* {
-  cursor: none;
+/* Hide default cursor - only on desktop with working custom cursor */
+@media (min-width: 769px) {
+  body.custom-cursor-enabled * {
+    cursor: none !important;
+  }
 }
 
 /* Button hover effects */
 button, a {
-  cursor: none;
   transition: all var(--transition-base);
 }
 
