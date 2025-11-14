@@ -1,70 +1,21 @@
-import { useEffect, useState } from 'react'
-import HeroScene from './components/3d/HeroScene'
-import CustomCursor from './components/CustomCursor'
-import Navigation from './components/Navigation'
-import Hero from './components/sections/Hero'
-import About from './components/sections/About'
-import Services from './components/sections/Services'
-import Portfolio from './components/sections/Portfolio'
-import ProductShowcaseSection from './components/sections/ProductShowcaseSection'
-import Testimonials from './components/sections/Testimonials'
-import Pricing from './components/sections/Pricing'
-import Contact from './components/sections/Contact'
-import WhatsAppButton from './components/WhatsAppButton'
-import ChatBot from './components/ChatBot'
-import SpatialAudio from './components/SpatialAudio'
-import Footer from './components/Footer'
-import './App.css'
-
-function App() {
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 2000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
+export default function App() {
   return (
-    <>
-      {/* Loading Screen */}
-      {loading && (
-        <div className={`loading-screen ${!loading ? 'fade-out' : ''}`}>
-          <h2 style={{ fontWeight: 300, letterSpacing: '0.5em' }}>JAFFSTUDIO</h2>
-        </div>
-      )}
+    <div style={{
+      background: '#000',
+      color: '#fff',
+      minHeight: '100vh',
+      padding: '2rem'
+    }}>
+      <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>JAFFSTUDIO</h1>
+      <p style={{ fontSize: '1.5rem', marginBottom: '2rem' }}>Website Working - Building Up From Here...</p>
 
-      {/* Custom 3D Cursor */}
-      <CustomCursor />
-
-      {/* Navigation */}
-      <Navigation />
-
-      {/* Fixed 3D WebGL Background */}
-      <HeroScene />
-
-      {/* Scrollable Content */}
-      <div className="content-overlay">
-        <Hero />
-        <About />
-        <Services />
-        <ProductShowcaseSection />
-        <Portfolio />
-        <Testimonials />
-        <Pricing />
-        <Contact />
-        <Footer />
+      <div style={{ marginTop: '3rem', maxWidth: '800px' }}>
+        <h2 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Testing Phase</h2>
+        <p style={{ lineHeight: '1.8' }}>
+          If you see this black background with white text, React is working.
+          I will now add components one by one to find what breaks it.
+        </p>
       </div>
-
-      {/* Floating Widgets */}
-      <WhatsAppButton />
-      <ChatBot />
-      <SpatialAudio />
-    </>
+    </div>
   )
 }
-
-export default App
