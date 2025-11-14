@@ -3,13 +3,16 @@ import HeroScene from './components/3d/HeroScene'
 import CustomCursor from './components/CustomCursor'
 import Navigation from './components/Navigation'
 import Hero from './components/sections/Hero'
+import About from './components/sections/About'
 import Services from './components/sections/Services'
 import Portfolio from './components/sections/Portfolio'
+import ProductShowcaseSection from './components/sections/ProductShowcaseSection'
 import Testimonials from './components/sections/Testimonials'
 import Pricing from './components/sections/Pricing'
 import Contact from './components/sections/Contact'
 import WhatsAppButton from './components/WhatsAppButton'
 import ChatBot from './components/ChatBot'
+import SpatialAudio from './components/SpatialAudio'
 import Footer from './components/Footer'
 import './App.css'
 
@@ -46,7 +49,9 @@ function App() {
       {/* Scrollable Content */}
       <div className="content-overlay">
         <Hero />
+        <About />
         <Services />
+        <ProductShowcaseSection />
         <Portfolio />
         <Testimonials />
         <Pricing />
@@ -57,6 +62,7 @@ function App() {
       {/* Floating Widgets */}
       <WhatsAppButton />
       <ChatBot />
+      <SpatialAudio />
     </>
   )
 }
