@@ -58,7 +58,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section ref={heroRef} className="hero-section section">
+    <section id="home" ref={heroRef} className="hero-section section">
       <div className="container text-center">
         <h1 ref={titleRef} className="hero-title">
           JAFFSTUDIO

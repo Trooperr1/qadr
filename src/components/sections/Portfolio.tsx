@@ -82,7 +82,7 @@ export default function Portfolio() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="portfolio-section section">
+    <section id="portfolio" ref={sectionRef} className="portfolio-section section">
       <div className="container">
         <h2 ref={titleRef} className="section-title">
           PORTFOLIO

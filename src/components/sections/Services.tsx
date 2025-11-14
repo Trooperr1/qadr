@@ -88,7 +88,7 @@ export default function Services() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="services-section section">
+    <section id="services" ref={sectionRef} className="services-section section">
       <div className="container">
         <h2 ref={titleRef} className="section-title">
           SERVICES

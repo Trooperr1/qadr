@@ -1,0 +1,190 @@
+.pricing-section {
+  min-height: 100vh;
+  padding: 8rem 0;
+}
+
+.pricing-calculator {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calculator-card {
+  padding: 4rem 3rem;
+}
+
+.calculator-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+}
+
+.service-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.service-option {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.service-option.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+
+.service-name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.service-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.addon-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.addon-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addon-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.addon-option input[type="checkbox"] {
+  display: none;
+}
+
+.addon-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.addon-option input[type="checkbox"]:checked + .addon-checkbox {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.addon-option input[type="checkbox"]:checked + .addon-checkbox::after {
+  content: '✓';
+  color: #000000;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.addon-details {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addon-name {
+  font-weight: 500;
+}
+
+.addon-price {
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.calculator-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.total-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.total-amount {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-button {
+  width: 100%;
+  padding: 1.5rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 4rem 0;
+  }
+
+  .calculator-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .service-options {
+    grid-template-columns: 1fr;
+  }
+
+  .total-amount {
+    font-size: 2rem;
+  }
+}
