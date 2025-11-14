@@ -1,0 +1,22 @@
+/* App specific styles */
+
+.content-overlay {
+  position: relative;
+  z-index: 10;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimization */
+* {
+  will-change: auto;
+}
+
+.card-3d,
+.hero-title,
+.section-title {
+  will-change: transform;
+}
